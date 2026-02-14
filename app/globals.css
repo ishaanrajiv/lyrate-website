@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 253 251 247;
+    --foreground: 26 26 26;
+  }
+
+  .dark {
+    --background: 10 10 10;
+    --foreground: 249 245 237;
+  }
+
+  body {
+    @apply bg-parchment-50 text-ink-900 dark:bg-ink-950 dark:text-parchment-100;
+    @apply bg-paper-texture;
+  }
+}
+
+@layer utilities {
+  /* Refined animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Stagger delays for orchestrated reveals */
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+  .delay-600 {
+    animation-delay: 600ms;
+  }
+
+  /* Custom text effects */
+  .text-gradient {
+    @apply bg-gradient-to-br from-ink-900 via-ink-700 to-ink-600 dark:from-parchment-100 dark:via-parchment-200 dark:to-parchment-300;
+    @apply bg-clip-text text-transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding-bottom: 0.1em;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-parchment-100 dark:bg-ink-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ink-400 dark:bg-ink-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ink-500 dark:bg-ink-500;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-cyan-400/30 text-ink-950 dark:text-parchment-50;
+}
