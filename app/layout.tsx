@@ -20,6 +20,11 @@ const crimson = Crimson_Text({
 export const metadata: Metadata = {
   title: "Lyrate — Read Better. Understand Deeper.",
   description: "A premium iOS eBook reader with beautiful typography, smart library tools, reading analytics, and optional AI summaries and Q&A.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "Lyrate — Read Better. Understand Deeper.",
     description: "A premium iOS eBook reader with beautiful typography, smart library tools, reading analytics, and optional AI summaries and Q&A.",
