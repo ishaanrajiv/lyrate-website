@@ -1,145 +1,34 @@
 # Lyrate Website
 
-A distinctive, production-grade showcase website for Lyrate - a blazing-fast iOS eBook reader.
+The marketing site for Lyrate, the EPUB reader for iPhone and iPad. Served at https://lyrate.ishaanrajiv.com.
 
-## Design Philosophy
+Next.js 15 (App Router), Tailwind CSS 3 and next-themes. One page, statically rendered.
 
-This website embodies **refined editorial sophistication** - drawing from literary magazine aesthetics (Granta, Paris Review) while celebrating native iOS reading craft and performance.
-
-### Aesthetic Direction
-
-- **Typography**: Playfair Display (display) + Crimson Text (body) for literary elegance
-- **Color Palette**: Warm parchment base, deep ink blacks, refined cyan accents
-- **Layout**: Asymmetric compositions with generous whitespace
-- **Animations**: Orchestrated scroll-triggered reveals and refined hover states
-- **Visual Details**: Paper textures, gradient overlays, decorative accents
-
-## Tech Stack
-
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling with custom theme
-- **Framer Motion** - Smooth animations and transitions
-- **next-themes** - Dark/light mode support
-
-## Getting Started
-
-### Install Dependencies
-
-\`\`\`bash
+```bash
 npm install
-\`\`\`
-
-### Run Development Server
-
-\`\`\`bash
-npm run dev
-\`\`\`
-
-Open [http://localhost:3000](http://localhost:3000) to view the site.
-
-### Build for Production
-
-\`\`\`bash
+npm run dev     # http://localhost:3000
 npm run build
-npm start
-\`\`\`
-
-## Project Structure
-
-```
-lyrate-app/
-├── app/
-│   ├── layout.tsx       # Root layout with fonts & theme provider
-│   ├── page.tsx         # Main landing page
-│   └── globals.css      # Global styles & animations
-├── components/
-│   ├── Hero.tsx           # Hero section with library screenshot
-│   ├── Pillars.tsx        # 4 core pillars (performance, organization, habits, reader)
-│   ├── Features.tsx       # Interactive feature showcase
-│   ├── ReadingHabits.tsx  # Reading habits & analytics section
-│   ├── Footer.tsx         # Footer with links
-│   └── ThemeToggle.tsx    # Dark/light theme switcher
-├── public/
-│   └── screenshots/     # App screenshots
-└── [config files]
 ```
 
-## Key Features
+## Brand
 
-### Literary-Modern Design
-- Custom serif typography (Playfair Display + Crimson Text)
-- Editorial layouts with asymmetric compositions
-- Refined paper textures and subtle visual details
+The site uses the design language from the iOS app (`Lyrate-iOS` main). If the app changes, take values from there.
 
-### Smooth Interactions
-- Scroll-triggered animations with Framer Motion
-- Orchestrated page load with staggered reveals
-- Interactive screenshot showcase with smooth transitions
+| Element | Source in Lyrate-iOS | Here |
+| --- | --- | --- |
+| Riffle mark | `Assets.xcassets/Logo.imageset` (Logo.svg, Logo-dark.svg) | `components/Brand.tsx`, `--riffle-*` in `app/globals.css` |
+| App icon | `LyrateIcon.icon` | `AppIcon` in `components/Brand.tsx`, `app/icon.svg`, `app/apple-icon.tsx` |
+| Brand ink (#232838 / #E9DFCB) | `Color.brandInk` in `Core/UI/Colors.swift` | `--ink` |
+| Page colour (#F2EDED / #0D0D0D) | `Color.dynamicBackground` | `--paper` |
+| Wordmark (Outfit Medium, −0.025em) | `Resources/Outfit-Medium.ttf`, `SplashView` | `app/fonts/`, `Wordmark` |
+| Icons (Loop, simplified B.2) | `Docs/Design/Icons/Source/*.svg` | `components/icons.ts` |
 
-### Dark/Light Mode
-- System-aware theme detection
-- Smooth theme transitions
-- Persistent user preference
+Interface text uses the system font stack, as the app does. The interface stays monochrome, and colour on the page comes from book covers.
 
-### Performance Optimized
-- Next.js Image optimization
-- Lazy loading for screenshots
-- Minimal JavaScript bundle
+## Content
 
-## Deployment
+All copy lives in `components/content.ts`. Only describe features that ship. Anything behind a feature flag in the app (AI, Calibre) stays off the site until it is enabled.
 
-### Deploy to Vercel
+## Screenshots
 
-1. Push to GitHub repository
-2. Import project in Vercel dashboard
-3. Deploy (zero configuration needed)
-
-Or use the Vercel CLI:
-
-\`\`\`bash
-npm install -g vercel
-vercel
-\`\`\`
-
-## Customization
-
-### Colors
-
-Edit [tailwind.config.ts](tailwind.config.ts) to customize the color palette:
-
-```typescript
-colors: {
-  parchment: { ... },  // Light mode backgrounds
-  ink: { ... },        // Dark colors & text
-  cyan: { ... },       // Accent colors
-}
-```
-
-### Typography
-
-Change fonts in [app/layout.tsx](app/layout.tsx):
-
-```typescript
-import { Your_Font } from "next/font/google";
-```
-
-### Content
-
-Update copy in individual components:
-- Hero tagline: `components/Hero.tsx`
-- Product pillars (4 core areas): `components/Pillars.tsx`
-- Features showcase: `components/Features.tsx`
-- Reading habits section: `components/ReadingHabits.tsx`
-
-## Key Focus Areas
-
-The website highlights 4 core pillars:
-1. **Native Performance** - Fast, handles 1000+ books, instant search
-2. **Simple Organization** - Clean UI, collections, easy library management
-3. **Reading Habits** - Track time, streaks, analytics, build consistency
-4. **Reader Features** - Light/dark mode, font customization, AI summarization
-
-## License
-
-Built for Lyrate - a premium iOS eBook reader.
+`public/shots/` holds screenshots of the current app build, taken on an iPhone simulator with the status bar set to 9:41. The library is filled with public-domain Project Gutenberg books. Light and dark versions share a name and differ by suffix (`-light`, `-dark`). `Phone` shows whichever one matches the site theme.

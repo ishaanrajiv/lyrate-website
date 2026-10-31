@@ -1,46 +1,45 @@
-import type { Metadata } from "next";
-import { Playfair_Display, Crimson_Text } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
+// Outfit Medium, the wordmark face. Same file the app bundles (SIL OFL).
+const outfit = localFont({
+  src: "./fonts/Outfit-Medium.ttf",
+  weight: "500",
+  variable: "--font-outfit",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const crimson = Crimson_Text({
-  subsets: ["latin"],
-  variable: "--font-crimson",
-  display: "swap",
-  weight: ["400", "600", "700"],
-});
+const description =
+  "Lyrate is an EPUB reader for iPhone and iPad. Careful typography, a tidy library and search inside every book. Your books stay on your device, with no account.";
 
 export const metadata: Metadata = {
-  title: "Lyrate — Read Better. Understand Deeper.",
-  description: "A premium iOS eBook reader with beautiful typography, smart library tools, reading analytics, and optional AI summaries and Q&A.",
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
+  metadataBase: new URL("https://lyrate.ishaanrajiv.com"),
+  title: "Lyrate — A quiet place to read",
+  description,
   openGraph: {
-    title: "Lyrate — Read Better. Understand Deeper.",
-    description: "A premium iOS eBook reader with beautiful typography, smart library tools, reading analytics, and optional AI summaries and Q&A.",
+    title: "Lyrate — A quiet place to read",
+    description,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F2EDED" },
+    { media: "(prefers-color-scheme: dark)", color: "#0D0D0D" },
+  ],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${playfair.variable} ${crimson.variable} font-body antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+      <body className={outfit.variable}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>

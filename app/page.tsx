@@ -1,17 +1,23 @@
+import TopNav from "@/components/TopNav";
 import Hero from "@/components/Hero";
-import Pillars from "@/components/Pillars";
-import Features from "@/components/Features";
-import ReadingHabits from "@/components/ReadingHabits";
+import Reading from "@/components/Reading";
+import Library from "@/components/Library";
+import Privacy from "@/components/Privacy";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative">
-      <Hero />
-      <Pillars />
-      <Features />
-      <ReadingHabits />
+    <>
+      <TopNav />
+      <main>
+        <Hero />
+        <Reading />
+        <Library />
+        <Privacy />
+        <FAQ />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
