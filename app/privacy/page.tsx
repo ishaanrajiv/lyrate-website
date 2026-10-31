@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import TopNav from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
+import { SUPPORT_EMAIL } from "@/components/content";
 
 const title = "Lyrate privacy policy";
 const description =
@@ -140,6 +141,19 @@ export default function PrivacyPolicy() {
               The developer does not knowingly collect personal information from children
               under 13 through Lyrate. The optional online features described above contact
               external services under their own privacy policies.
+            </p>
+          </PolicySection>
+
+          <PolicySection id="contact" title="Contact">
+            <p>
+              For privacy questions or requests, email{" "}
+              <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+            </p>
+            <p>
+              If you email support, the developer receives your email address, your message
+              and any attachments you send. This information is used to respond to your
+              request and is kept while needed to handle it and follow up on the issue.
+              You can request deletion of your support correspondence at the same address.
             </p>
           </PolicySection>
 

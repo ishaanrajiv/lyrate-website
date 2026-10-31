@@ -22,6 +22,11 @@ export default function SiteFooter() {
             </li>
           ))}
           <li>
+            <Link href="/support" className="transition-colors hover:text-ink">
+              Support
+            </Link>
+          </li>
+          <li>
             <a href={TESTFLIGHT_URL} target="_blank" rel="noreferrer" className="transition-colors hover:text-ink">
               TestFlight
             </a>

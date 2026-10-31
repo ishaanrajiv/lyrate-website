@@ -3,6 +3,7 @@
 import type { IconName } from "./icons";
 
 export const TESTFLIGHT_URL = "https://testflight.apple.com/join/VU4j4CwJ";
+export const SUPPORT_EMAIL = "lyrate@ishaanrajiv.com";
 
 export interface Screenshot {
   light: string;

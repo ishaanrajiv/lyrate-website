@@ -2,7 +2,7 @@
 
 The marketing site for Lyrate, the EPUB reader for iPhone and iPad. Served at https://lyrate.ishaanrajiv.com.
 
-Next.js 15 (App Router), Tailwind CSS 3 and next-themes. A statically rendered homepage and privacy policy.
+Next.js 15 (App Router), Tailwind CSS 3 and next-themes. Statically rendered homepage, privacy policy and support pages.
 
 ```bash
 npm install
@@ -28,6 +28,8 @@ Interface text uses the system font stack, as the app does. The interface stays 
 ## Content
 
 Marketing copy lives in `components/content.ts`. The full privacy policy lives in `app/privacy/page.tsx` and is served at `/privacy`. Link this URL from App Store Connect and the app's Settings. Only describe features that ship. Anything behind a feature flag in the app (AI, Calibre) stays off the site until it is enabled.
+
+The App Store Support URL is `https://lyrate.ishaanrajiv.com/support`, implemented in `app/support/page.tsx`. The support email is defined once as `SUPPORT_EMAIL` in `components/content.ts` and shared with the privacy policy. Email routing is managed separately through Cloudflare.
 
 ## Screenshots
 
