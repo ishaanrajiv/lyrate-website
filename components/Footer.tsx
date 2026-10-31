@@ -1,5 +1,6 @@
-import { AppIcon, Riffle, Wordmark } from "./Brand";
-import { CLOSING, NAV_LINKS, TESTFLIGHT_URL } from "./content";
+import { AppIcon } from "./Brand";
+import { CLOSING, TESTFLIGHT_URL } from "./content";
+import SiteFooter from "./SiteFooter";
 
 export default function Footer() {
   return (
@@ -13,29 +14,7 @@ export default function Footer() {
         </a>
       </div>
 
-      <div className="border-t rule">
-        <div className="mx-auto flex max-w-page flex-col gap-6 px-4 py-8 text-sm text-ink/50 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <a href="#top" className="flex items-center gap-2 text-ink" aria-label="Lyrate, back to top">
-            <Riffle className="h-6 w-6" />
-            <Wordmark className="text-lg leading-none" />
-          </a>
-          <ul className="flex flex-wrap gap-x-6 gap-y-2">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} className="transition-colors hover:text-ink">
-                  {link.label}
-                </a>
-              </li>
-            ))}
-            <li>
-              <a href={TESTFLIGHT_URL} target="_blank" rel="noreferrer" className="transition-colors hover:text-ink">
-                TestFlight
-              </a>
-            </li>
-          </ul>
-          <p>© {new Date().getFullYear()} Lyrate</p>
-        </div>
-      </div>
+      <SiteFooter />
     </footer>
   );
 }

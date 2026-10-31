@@ -150,6 +150,7 @@ export const PRIVACY = {
   label: "Privacy",
   title: "Your books live on this device.",
   body: "Lyrate has no account, no sign-in and no server holding your library. What you read, and how much, stays with you.",
+  policyLink: "Read the privacy policy",
   points: [
     {
       icon: "lock",

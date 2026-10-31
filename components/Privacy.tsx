@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Icon from "./Icon";
 import { PRIVACY } from "./content";
 
@@ -10,6 +11,12 @@ export default function Privacy() {
             <p className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-on-ink/55">{PRIVACY.label}</p>
             <h2 className="display mt-4 text-[2.5rem] sm:text-[3.75rem]">{PRIVACY.title}</h2>
             <p className="mt-6 text-[1.0625rem] leading-relaxed text-on-ink/70 sm:text-lg">{PRIVACY.body}</p>
+            <Link
+              href="/privacy"
+              className="mt-6 inline-block rounded-sm font-semibold underline decoration-on-ink/40 underline-offset-4 transition-colors hover:decoration-on-ink focus-visible:outline-on-ink"
+            >
+              {PRIVACY.policyLink}
+            </Link>
           </div>
 
           <ul className="mt-16 grid gap-10 sm:grid-cols-3">

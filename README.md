@@ -2,7 +2,7 @@
 
 The marketing site for Lyrate, the EPUB reader for iPhone and iPad. Served at https://lyrate.ishaanrajiv.com.
 
-Next.js 15 (App Router), Tailwind CSS 3 and next-themes. One page, statically rendered.
+Next.js 15 (App Router), Tailwind CSS 3 and next-themes. A statically rendered homepage and privacy policy.
 
 ```bash
 npm install
@@ -27,7 +27,7 @@ Interface text uses the system font stack, as the app does. The interface stays 
 
 ## Content
 
-All copy lives in `components/content.ts`. Only describe features that ship. Anything behind a feature flag in the app (AI, Calibre) stays off the site until it is enabled.
+Marketing copy lives in `components/content.ts`. The full privacy policy lives in `app/privacy/page.tsx` and is served at `/privacy`. Link this URL from App Store Connect and the app's Settings. Only describe features that ship. Anything behind a feature flag in the app (AI, Calibre) stays off the site until it is enabled.
 
 ## Screenshots
 
