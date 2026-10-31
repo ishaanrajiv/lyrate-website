@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import TopNav from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
-import { SUPPORT_EMAIL } from "@/components/content";
+import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/components/content";
 
 const title = "Lyrate privacy policy";
 const description =
@@ -147,7 +147,7 @@ export default function PrivacyPolicy() {
           <PolicySection id="contact" title="Contact">
             <p>
               For privacy questions or requests, email{" "}
-              <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+              <a href={SUPPORT_MAILTO}>{SUPPORT_EMAIL}</a>.
             </p>
             <p>
               If you email support, the developer receives your email address, your message

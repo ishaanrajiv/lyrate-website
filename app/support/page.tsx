@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import TopNav from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
-import { SUPPORT_EMAIL } from "@/components/content";
+import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/components/content";
 
 const title = "Lyrate support";
 const description = "Get help with Lyrate for iPhone and iPad, report a problem, or suggest an improvement.";
@@ -27,7 +27,7 @@ export default function Support() {
               Have a question, found a bug, or have an idea for Lyrate? Send an email.
             </p>
             <a
-              href={`mailto:${SUPPORT_EMAIL}`}
+              href={SUPPORT_MAILTO}
               className="mt-6 inline-block rounded-sm text-lg font-semibold underline decoration-ink/40 underline-offset-4 transition-colors hover:decoration-ink"
             >
               {SUPPORT_EMAIL}

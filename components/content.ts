@@ -4,6 +4,7 @@ import type { IconName } from "./icons";
 
 export const TESTFLIGHT_URL = "https://testflight.apple.com/join/VU4j4CwJ";
 export const SUPPORT_EMAIL = "lyrate@ishaanrajiv.com";
+export const SUPPORT_MAILTO = `mailto:${SUPPORT_EMAIL}?subject=%5BLyrate%20Support%5D%20`;
 
 export interface Screenshot {
   light: string;
