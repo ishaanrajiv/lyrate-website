@@ -1,5 +1,5 @@
 import { AppIcon } from "./Brand";
-import { CLOSING, TESTFLIGHT_URL } from "./content";
+import { CLOSING, APP_STORE_URL } from "./content";
 import SiteFooter from "./SiteFooter";
 
 export default function Footer() {
@@ -9,8 +9,8 @@ export default function Footer() {
         <AppIcon className="rise h-24 w-24 drop-shadow-[0_18px_30px_rgb(35_40_56/0.25)] sm:h-28 sm:w-28" />
         <h2 className="display rise mt-10 text-[2.5rem] sm:text-[3.5rem]">{CLOSING.title}</h2>
         <p className="lede rise mt-5 max-w-[30rem]">{CLOSING.body}</p>
-        <a href={TESTFLIGHT_URL} target="_blank" rel="noreferrer" className="button-primary rise mt-9">
-          Join the TestFlight beta
+        <a href={APP_STORE_URL} target="_blank" rel="noreferrer" className="button-primary rise mt-9">
+          Download on the App Store
         </a>
       </div>
 

@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://lyrate.ishaanrajiv.com"),
   title: "Lyrate — A quiet place to read",
   description,
+  itunes: { appId: "6752578241" },
   openGraph: {
     title: "Lyrate — A quiet place to read",
     description,

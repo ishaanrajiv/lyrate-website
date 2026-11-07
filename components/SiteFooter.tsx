@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Riffle, Wordmark } from "./Brand";
-import { NAV_LINKS, TESTFLIGHT_URL } from "./content";
+import { NAV_LINKS, APP_STORE_URL } from "./content";
 
 export default function SiteFooter() {
   return (
@@ -27,8 +27,8 @@ export default function SiteFooter() {
             </Link>
           </li>
           <li>
-            <a href={TESTFLIGHT_URL} target="_blank" rel="noreferrer" className="transition-colors hover:text-ink">
-              TestFlight
+            <a href={APP_STORE_URL} target="_blank" rel="noreferrer" className="transition-colors hover:text-ink">
+              App Store
             </a>
           </li>
         </ul>

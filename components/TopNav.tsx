@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Riffle, Wordmark } from "./Brand";
 import ThemeToggle from "./ThemeToggle";
-import { NAV_LINKS, TESTFLIGHT_URL } from "./content";
+import { NAV_LINKS, APP_STORE_URL } from "./content";
 
 export default function TopNav() {
   return (
@@ -26,8 +26,8 @@ export default function TopNav() {
             ))}
           </ul>
           <ThemeToggle />
-          <a href={TESTFLIGHT_URL} target="_blank" rel="noreferrer" className="button-primary ml-1 h-10 px-4 text-sm">
-            Get the beta
+          <a href={APP_STORE_URL} target="_blank" rel="noreferrer" className="button-primary ml-1 h-10 px-4 text-sm">
+            Download
           </a>
         </div>
       </nav>

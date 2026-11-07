@@ -1,6 +1,6 @@
 import { Riffle, Wordmark } from "./Brand";
 import Phone from "./Phone";
-import { HERO, SHOTS, TESTFLIGHT_URL } from "./content";
+import { HERO, SHOTS, APP_STORE_URL } from "./content";
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
         <p className="lede mt-6 max-w-[34rem]">{HERO.body}</p>
 
         <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
-          <a href={TESTFLIGHT_URL} target="_blank" rel="noreferrer" className="button-primary">
+          <a href={APP_STORE_URL} target="_blank" rel="noreferrer" className="button-primary">
             {HERO.primary}
           </a>
           <a href="#reading" className="button-quiet">

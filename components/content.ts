@@ -2,7 +2,7 @@
 // flags there (AI, Calibre) are not mentioned until they ship.
 import type { IconName } from "./icons";
 
-export const TESTFLIGHT_URL = "https://testflight.apple.com/join/VU4j4CwJ";
+export const APP_STORE_URL = "https://apps.apple.com/app/lyrate-epub-reader/id6752578241";
 export const SUPPORT_EMAIL = "lyrate@ishaanrajiv.com";
 export const SUPPORT_MAILTO = `mailto:${SUPPORT_EMAIL}?subject=%5BLyrate%20Support%5D%20`;
 
@@ -45,9 +45,9 @@ export const HERO = {
   eyebrow: "EPUB reader for iPhone and iPad",
   title: "A quiet place to read.",
   body: "Lyrate keeps your books on your device and stays out of the way while you read them. There is no account to make and nothing asking for your attention.",
-  primary: "Join the TestFlight beta",
+  primary: "Download on the App Store",
   secondary: "See the reader",
-  note: "Free beta · iOS and iPadOS 26 or later",
+  note: "Free · iOS and iPadOS 26 or later",
 };
 
 export const READING = {
@@ -196,9 +196,9 @@ export const FAQ = [
     answer: "Lyrate comes with Pride and Prejudice, so there is something to read the moment it is installed.",
   },
   {
-    question: "How do I get the beta?",
+    question: "How do I get Lyrate?",
     answer:
-      "Lyrate is in public beta on TestFlight. Install Apple’s TestFlight app, then open the invite link on your iPhone or iPad.",
+      "Lyrate is free on the App Store for iPhone and iPad, and needs iOS or iPadOS 26 or later.",
   },
 ];
 
