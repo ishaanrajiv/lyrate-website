@@ -19,7 +19,7 @@ The site uses the design language from the iOS app (`Lyrate-iOS` main). If the a
 | Riffle mark | `Assets.xcassets/Logo.imageset` (Logo.svg, Logo-dark.svg) | `components/Brand.tsx`, `--riffle-*` in `app/globals.css` |
 | App icon | `LyrateIcon.icon` | `AppIcon` in `components/Brand.tsx`, `app/icon.svg`, `app/apple-icon.tsx` |
 | Brand ink (#232838 / #E9DFCB) | `Color.brandInk` in `Core/UI/Colors.swift` | `--ink` |
-| Page colour (#F2EDED / #0D0D0D) | `Color.dynamicBackground` | `--paper` |
+| Page colour (#F2EDED / #080808) | `Color.dynamicBackground` | `--paper` |
 | Wordmark (Outfit Medium, −0.025em) | `Resources/Outfit-Medium.ttf`, `SplashView` | `app/fonts/`, `Wordmark` |
 | Icons (Loop, simplified B.2) | `Docs/Design/Icons/Source/*.svg` | `components/icons.ts` |
 

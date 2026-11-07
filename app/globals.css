@@ -5,7 +5,7 @@
 /*
   Brand tokens, matching the iOS app (Lyrate-iOS lyrate/Core/UI/Colors.swift):
   ink #232838 and paper #E9DFCB are Color.brandInk; the page colours are
-  dynamicBackground (#F2EDED light, #0D0D0D dark). Values are RGB triplets so
+  dynamicBackground (#F2EDED light, #080808 dark). Values are RGB triplets so
   Tailwind can apply opacity.
 */
 :root {
@@ -27,7 +27,7 @@
 }
 
 .dark {
-  --paper: 13 13 13;
+  --paper: 8 8 8;
   --paper-raised: 22 22 22;
   --ink: 233 223 203;
   --on-ink: 12 14 21;
