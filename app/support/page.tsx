@@ -28,7 +28,7 @@ export default function Support() {
             </p>
             <a
               href={SUPPORT_MAILTO}
-              className="mt-6 inline-block rounded-sm text-lg font-semibold underline decoration-ink/40 underline-offset-4 transition-colors hover:decoration-ink"
+              className="mt-6 inline-block rounded-sm text-lg font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent"
             >
               {SUPPORT_EMAIL}
             </a>
@@ -52,10 +52,10 @@ export default function Support() {
           </section>
 
           <nav aria-label="More help" className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t rule pt-8 text-sm font-semibold sm:mt-14">
-            <Link href="/#faq" className="rounded-sm underline decoration-ink/40 underline-offset-4 hover:decoration-ink">
+            <Link href="/#faq" className="rounded-sm text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent">
               Frequently asked questions
             </Link>
-            <Link href="/privacy" className="rounded-sm underline decoration-ink/40 underline-offset-4 hover:decoration-ink">
+            <Link href="/privacy" className="rounded-sm text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent">
               Privacy policy
             </Link>
           </nav>

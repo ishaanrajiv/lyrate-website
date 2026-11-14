@@ -3,25 +3,40 @@
 @tailwind utilities;
 
 /*
-  Brand tokens, matching the iOS app (Lyrate-iOS lyrate/Core/UI/Colors.swift):
-  ink #232838 and paper #E9DFCB are Color.brandInk; the page colours are
-  dynamicBackground (#F2EDED light, #080808 dark). Values are RGB triplets so
-  Tailwind can apply opacity.
+  Design tokens, matching the iOS app (Lyrate-iOS lyrate/Core/UI/Colors.swift) and the
+  shared design language: text is the platform label colour (black / white, as Apple's
+  label), grounds are dynamicBackground (#F2EDED / #080808), the accent is sea glass
+  (#307772 on light, #6CC4BE on dark), and "lit" (navy / cream) fills only the primary
+  button and the selected thing. Values are RGB triplets so Tailwind can apply opacity.
 */
 :root {
   --paper: 242 237 237;
   --paper-raised: 234 228 227;
-  --ink: 35 40 56;
-  --on-ink: 243 235 221;
+  --ink: 0 0 0;
+  --lit: 35 40 56;
+  --on-lit: 243 235 221;
+  --accent: 48 119 114;
 
   /* Riffle mark, front page to back (Logo.svg) */
   --riffle-0: #232838;
-  --riffle-1: #454855;
-  --riffle-2: #646771;
-  --riffle-3: #82838a;
-  --riffle-4: #9d9ea2;
-  --riffle-5: #b6b6b8;
-  --riffle-6: #cbcaca;
+  --riffle-1: #273a47;
+  --riffle-2: #2c4d56;
+  --riffle-3: #306064;
+  --riffle-4: #347273;
+  --riffle-5: #398482;
+  --riffle-6: #3d9791;
+
+  /* App icon (LyrateIcon.icon): tile, then pages front to back */
+  --icon-tile-top: #e4ede8;
+  --icon-tile-bottom: #e4ede8;
+  --icon-hairline: 0 0 0;
+  --icon-0: #232838;
+  --icon-1: #273a46;
+  --icon-2: #2b4c55;
+  --icon-3: #2f5e63;
+  --icon-4: #337071;
+  --icon-5: #378280;
+  --icon-6: #3b948e;
 
   color-scheme: light;
 }
@@ -29,17 +44,31 @@
 .dark {
   --paper: 8 8 8;
   --paper-raised: 22 22 22;
-  --ink: 233 223 203;
-  --on-ink: 12 14 21;
+  --ink: 255 255 255;
+  --lit: 243 235 221;
+  --on-lit: 12 14 21;
+  --accent: 108 196 190;
 
   /* Logo-dark.svg */
-  --riffle-0: #e9dfcb;
-  --riffle-1: #c6beae;
-  --riffle-2: #a49e93;
-  --riffle-3: #868179;
-  --riffle-4: #696661;
-  --riffle-5: #4e4d4c;
-  --riffle-6: #383839;
+  --riffle-0: #f3ebdd;
+  --riffle-1: #dce4d8;
+  --riffle-2: #c6ded3;
+  --riffle-3: #b0d8ce;
+  --riffle-4: #99d1c8;
+  --riffle-5: #82cac3;
+  --riffle-6: #6cc4be;
+
+  /* App icon (LyrateIcon.icon): tile, then pages front to back */
+  --icon-tile-top: #1c1a17;
+  --icon-tile-bottom: #0b0a09;
+  --icon-hairline: 255 255 255;
+  --icon-0: #f3ebdd;
+  --icon-1: #dce4d8;
+  --icon-2: #c6ded3;
+  --icon-3: #b0d8ce;
+  --icon-4: #99d1c8;
+  --icon-5: #82cac3;
+  --icon-6: #6cc4be;
 
   color-scheme: dark;
 }
@@ -57,11 +86,11 @@
   }
 
   ::selection {
-    background: rgb(var(--ink) / 0.14);
+    background: rgb(var(--accent) / 0.25);
   }
 
   :focus-visible {
-    outline: 2px solid rgb(var(--ink));
+    outline: 2px solid rgb(var(--accent));
     outline-offset: 3px;
     border-radius: 6px;
   }
@@ -84,7 +113,7 @@
   }
 
   .button-primary {
-    @apply inline-flex h-12 items-center justify-center gap-2 rounded-full bg-ink px-6 text-[0.9375rem] font-semibold text-on-ink transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98];
+    @apply inline-flex h-12 items-center justify-center gap-2 rounded-full bg-lit px-6 text-[0.9375rem] font-semibold text-on-lit transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98];
   }
 
   .button-quiet {

@@ -5,15 +5,15 @@ import { PRIVACY } from "./content";
 export default function Privacy() {
   return (
     <section id="privacy" className="px-2 sm:px-4">
-      <div className="mx-auto max-w-[80rem] rounded-[2rem] bg-ink px-6 py-20 text-on-ink sm:rounded-[2.5rem] sm:px-12 sm:py-28">
+      <div className="mx-auto max-w-[80rem] rounded-[2rem] bg-lit px-6 py-20 text-on-lit sm:rounded-[2.5rem] sm:px-12 sm:py-28">
         <div className="mx-auto max-w-page">
           <div className="rise max-w-2xl">
-            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-on-ink/55">{PRIVACY.label}</p>
+            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-on-lit/55">{PRIVACY.label}</p>
             <h2 className="display mt-4 text-[2.5rem] sm:text-[3.75rem]">{PRIVACY.title}</h2>
-            <p className="mt-6 text-[1.0625rem] leading-relaxed text-on-ink/70 sm:text-lg">{PRIVACY.body}</p>
+            <p className="mt-6 text-[1.0625rem] leading-relaxed text-on-lit/70 sm:text-lg">{PRIVACY.body}</p>
             <Link
               href="/privacy"
-              className="mt-6 inline-block rounded-sm font-semibold underline decoration-on-ink/40 underline-offset-4 transition-colors hover:decoration-on-ink focus-visible:outline-on-ink"
+              className="mt-6 inline-block rounded-sm font-semibold underline decoration-on-lit/40 underline-offset-4 transition-colors hover:decoration-on-lit focus-visible:outline-on-lit"
             >
               {PRIVACY.policyLink}
             </Link>
@@ -21,10 +21,10 @@ export default function Privacy() {
 
           <ul className="mt-16 grid gap-10 sm:grid-cols-3">
             {PRIVACY.points.map((point) => (
-              <li key={point.title} className="rise border-t border-on-ink/15 pt-5">
+              <li key={point.title} className="rise border-t border-on-lit/15 pt-5">
                 <Icon name={point.icon} className="h-7 w-7" />
                 <h3 className="mt-4 text-[1.0625rem] font-semibold tracking-[-0.01em]">{point.title}</h3>
-                <p className="mt-2 text-[0.9375rem] leading-relaxed text-on-ink/65">{point.body}</p>
+                <p className="mt-2 text-[0.9375rem] leading-relaxed text-on-lit/65">{point.body}</p>
               </li>
             ))}
           </ul>

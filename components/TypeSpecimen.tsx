@@ -26,7 +26,7 @@ export default function TypeSpecimen() {
               onClick={() => setFace(index)}
               style={{ fontFamily: typeface.stack }}
               className={`h-10 rounded-full px-4 text-[0.9375rem] font-semibold transition-colors ${
-                selected ? "bg-ink text-on-ink" : "bg-paper text-ink ring-1 ring-ink/10 hover:ring-ink/25"
+                selected ? "bg-lit text-on-lit" : "bg-paper text-ink ring-1 ring-ink/10 hover:ring-ink/25"
               }`}
             >
               {typeface.name}
@@ -47,7 +47,7 @@ export default function TypeSpecimen() {
             max={SIZES.max}
             value={size}
             onChange={(event) => setSize(Number(event.target.value))}
-            className="h-1 flex-1 cursor-pointer accent-[rgb(var(--ink))]"
+            className="h-1 flex-1 cursor-pointer accent-[rgb(var(--accent))]"
           />
           <span className="w-6 text-right text-sm tabular-nums text-ink/55">{size}</span>
         </div>
@@ -56,7 +56,7 @@ export default function TypeSpecimen() {
             type="checkbox"
             checked={justified}
             onChange={(event) => setJustified(event.target.checked)}
-            className="h-4 w-4 accent-[rgb(var(--ink))]"
+            className="h-4 w-4 accent-[rgb(var(--accent))]"
           />
           Justify and hyphenate
         </label>

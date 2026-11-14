@@ -3,11 +3,11 @@ import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-// Outfit Medium, the wordmark face. Same file the app bundles (SIL OFL).
-const outfit = localFont({
-  src: "./fonts/Outfit-Medium.ttf",
+// Geist Medium, the wordmark face. Same file the app bundles (SIL OFL).
+const geist = localFont({
+  src: "./fonts/Geist-Medium.ttf",
   weight: "500",
-  variable: "--font-outfit",
+  variable: "--font-geist",
   display: "swap",
 });
 
@@ -39,7 +39,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={outfit.variable}>
+      <body className={geist.variable}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
