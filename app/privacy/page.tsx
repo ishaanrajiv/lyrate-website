@@ -25,7 +25,7 @@ function PolicySection({
       <h2 id={id} className="mb-5 text-2xl font-semibold tracking-[-0.025em] text-ink">
         {title}
       </h2>
-      <div className="space-y-5 text-[1.0625rem] leading-[1.8] text-ink/80 [&_a]:text-ink [&_a]:underline [&_a]:decoration-ink/40 [&_a]:underline-offset-4 hover:[&_a]:decoration-ink [&_li]:pl-1 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
+      <div className="space-y-5 text-[1.0625rem] leading-[1.8] text-ink/80 [&_a]:text-accent [&_a]:underline [&_a]:decoration-accent/40 [&_a]:underline-offset-4 hover:[&_a]:decoration-accent [&_li]:pl-1 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5">
         {children}
       </div>
     </section>

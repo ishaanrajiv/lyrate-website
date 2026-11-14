@@ -10,7 +10,9 @@ const config: Config = {
         paper: "rgb(var(--paper) / <alpha-value>)",
         "paper-raised": "rgb(var(--paper-raised) / <alpha-value>)",
         ink: "rgb(var(--ink) / <alpha-value>)",
-        "on-ink": "rgb(var(--on-ink) / <alpha-value>)",
+        lit: "rgb(var(--lit) / <alpha-value>)",
+        "on-lit": "rgb(var(--on-lit) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
       },
       fontFamily: {
         sans: [
@@ -22,7 +24,7 @@ const config: Config = {
           "Arial",
           "sans-serif",
         ],
-        wordmark: ["var(--font-outfit)", "sans-serif"],
+        wordmark: ["var(--font-geist)", "sans-serif"],
         book: ["Georgia", "Iowan Old Style", "Times New Roman", "serif"],
       },
       maxWidth: {
